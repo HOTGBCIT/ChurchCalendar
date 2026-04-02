@@ -1,94 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Church Calendar</title>
+
 <style>
-.calendar-wrapper {
-display: flex;
-gap: 20px;
-max-width: 1400px;
-margin: auto;
-font-family: Arial, sans-serif;
-box-sizing: border-box;
-padding: 10px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
 }
-.calendar-sidebar {
-width: 290px;
-min-width: 230px;
-background: #fafafa;
-padding: 20px;
-border: 1px solid #e5e5e5;
-border-radius: 12px;
-box-sizing: border-box;
+
+h1 {
+  text-align: center;
+  padding: 20px 10px 10px;
 }
-.calendar-sidebar h3 {
-margin-top: 0;
-margin-bottom: 18px;
-font-size: 22px;
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
 }
-.calendar-link {
-display: block;
-padding: 12px 14px;
-margin-bottom: 10px;
-background: #ffffff;
-text-decoration: none;
-color: #111;
-border: 1px solid #ddd;
-border-radius: 8px;
-font-size: 16px;
-line-height: 1.3;
-box-sizing: border-box;
+
+.btn {
+  display: block;
+  background: #1f1f1f;
+  color: white;
+  text-decoration: none;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #333;
 }
-.calendar-link:hover {
-background: #f3f3f3;
-}
-.calendar-main {
-flex: 1;
-min-width: 0;
-}
-.calendar-frame {
-border: 1px solid #ddd;
-width: 100%;
-height: 850px;
-border-radius: 12px;
-background: #fff;
-box-sizing: border-box;
-}
-@media (max-width: 900px) {
-.calendar-wrapper {
-flex-direction: column;
-}
-.calendar-sidebar {
-width: 100%;
-min-width: 0;
-}
-.calendar-frame {
-height: 700px;
-}
-}
-@media (max-width: 600px) {
-.calendar-wrapper {
-padding: 6px;
-gap: 14px;
-}
-.calendar-sidebar {
-padding: 14px;
-border-radius: 10px;
-}
-.calendar-sidebar h3 {
-font-size: 20px;
-margin-bottom: 14px;
-}
-.calendar-link {
-font-size: 15px;
-padding: 11px 12px;
-margin-bottom: 8px;
-}
-.calendar-frame {
-height: 600px;
-border-radius: 10px;
-}
+
+.btn:hover {
+  background: #2a2a2a;
 }
 </style>
-<div class="calendar-wrapper">
-<div class="calendar-sidebar">
-<h3>Календари служений</h3>
-<a class="calendar-link" href="https://calendar.google.com/calendar/embed?src=c_2afefb328f4ea38d07fb8c5d550c7966d67bf062e8f530297696735db9fb7232%40group.calendar.google.com&ctz=America%2FNew_York" target="calendarFrame">Служение и Церковные мероприятия</a> <a class="calendar-link" href="https://calendar.google.com/calendar/embed?src=production%40homeofgospel.org&ctz=America%2FNew_York" target="calendarFrame">Media Team</a> <a class="calendar-link" href="https://calendar.google.com/calendar/embed?src=c_b317e6643a3d51bb2f536ceb83e36fce1289cbd194d853fe954c7d6c6d7453b2%40group.calendar.google.com&ctz=America%2FNew_York" target="calendarFrame">Подростки</a> <a class="calendar-link" href="https://calendar.google.com/calendar/embed?src=c_665a973b0800cf3a753741254401ec90672654396a2e538391d580d5ece227ea%40group.calendar.google.com&ctz=America%2FNew_York" target="calendarFrame">Библейская школа</a> <a class="calendar-link" href="https://calendar.google.com/calendar/embed?src=c_dea824fc51439f2a2b720aef82fee12f7d889b6e44e6a9f2ff86231af566b27c%40group.calendar.google.com&ctz=America%2FNew_York" target="calendarFrame">Русская Школа</a> <a class="calendar-link" href="https://calendar.google.com/calendar/embed?src=c_b80cf78742fbd4a742047550c2ded370c3a0c33650f30f5f79d1719e2be9d010%40group.calendar.google.com&ctz=America%2FNew_York" target="calendarFrame">Хоровое Служение</a> <a class="calendar-link" href="https://calendar.google.com/calendar/embed?src=c_2387f52fd1e86874fb6bf9305e8f00a04934ce7a82acdff8da72bcef30f7b4a3%40group.calendar.google.com&ctz=America%2FNew_York" target="calendarFrame">Семейный отдел</a> <a class="calendar-link" href="https://calendar.google.com/calendar/embed?src=c_053ec5917d823f2420d830f3a5b974f0ba9401cf80d08ee5bb7f62c723dd552c%40group.calendar.google.com&ctz=America%2FNew_York" target="calendarFrame">Молитвенные Группы</a> <a class="calendar-link" href="https://calendar.google.com/calendar/embed?src=c_cf9fbb4d3e84e52c82faf7efacbb854c74dbf01699859ff7d376921788afa644%40group.calendar.google.com&ctz=America%2FNew_York" target="calendarFrame">Христианские праздники</a></div>
-<div class="calendar-main"><iframe class="calendar-frame" name="calendarFrame" src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID_1&ctz=America/New_York" frameborder="0" scrolling="no" id="calendarFrame"></iframe></div>
+</head>
+
+<body>
+
+<h1>Church Calendar</h1>
+
+<div class="container">
+
+<a class="btn" href="https://calendar.google.com/calendar/u/0/r?cid=c_2afefb328f4ea38d07fb8c5d550c7966d67bf062e8f530297696735db9fb7232@group.calendar.google.com">
+Служение и Церковные мероприятия
+</a>
+
+<a class="btn" href="https://calendar.google.com/calendar/u/0/r?cid=production@homeofgospel.org">
+Media Team
+</a>
+
+<a class="btn" href="https://calendar.google.com/calendar/u/0/r?cid=c_b317e6643a3d51bb2f536ceb83e36fce1289cbd194d853fe954c7d6c6d7453b2@group.calendar.google.com">
+Подростки
+</a>
+
+<a class="btn" href="https://calendar.google.com/calendar/u/0/r?cid=c_665a973b0800cf3a753741254401ec90672654396a2e538391d580d5ece227ea@group.calendar.google.com">
+Библейская школа
+</a>
+
+<a class="btn" href="https://calendar.google.com/calendar/u/0/r?cid=c_dea824fc51439f2a2b720aef82fee12f7d889b6e44e6a9f2ff86231af566b27c@group.calendar.google.com">
+Русская Школа
+</a>
+
+<a class="btn" href="https://calendar.google.com/calendar/u/0/r?cid=c_b80cf78742fbd4a742047550c2ded370c3a0c33650f30f5f79d1719e2be9d010@group.calendar.google.com">
+Хоровое Служение
+</a>
+
+<a class="btn" href="https://calendar.google.com/calendar/u/0/r?cid=c_2387f52fd1e86874fb6bf9305e8f00a04934ce7a82acdff8da72bcef30f7b4a3@group.calendar.google.com">
+Семейный отдел
+</a>
+
+<a class="btn" href="https://calendar.google.com/calendar/u/0/r?cid=c_053ec5917d823f2420d830f3a5b974f0ba9401cf80d08ee5bb7f62c723dd552c@group.calendar.google.com">
+Молитвенные Группы
+</a>
+
+<a class="btn" href="https://calendar.google.com/calendar/u/0/r?cid=c_cf9fbb4d3e84e52c82faf7efacbb854c74dbf01699859ff7d376921788afa644@group.calendar.google.com">
+Христианские праздники
+</a>
+
 </div>
+
+</body>
+</html>
